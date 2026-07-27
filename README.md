@@ -11,9 +11,9 @@ I also just find the questions genuinely interesting — not "which brand of car
 ## What's in here
 
 - `owid-co2-data.csv` — the raw file as downloaded from OWID's GitHub (79 columns, everything they publish)
-- `00_build_database.py` — loads it into a proper SQLite database (`co2_emissions.db`), trims to the ~24 columns actually used here, adds an `is_country` flag since OWID mixes real countries in with continent/income-group rollups in the same table (more on that gotcha below)
-- `queries.sql` — 13 SQL queries, commented, covering CTEs, window functions (RANK, LAG, running SUM() OVER), subqueries, joins, and HAVING — all tested and confirmed working against the actual database, not just written and hoped for
-- `analyze.py` — Python/matplotlib layer for the visuals, run against the same SQLite DB
+- `build_database.py` — loads it into a proper SQLite database (`co2_emissions.db`), trims to the ~24 columns actually used here, adds an `is_country` flag since OWID mixes real countries in with continent/income-group rollups in the same table (more on that gotcha below)
+- `analysis_queries.sql` — 13 SQL queries, commented, covering CTEs, window functions (RANK, LAG, running SUM() OVER), subqueries, joins, and HAVING — all tested and confirmed working against the actual database, not just written and hoped for
+- `analysis_pipeline.py` — Python/matplotlib layer for the visuals, run against the same SQLite DB
 - 6 chart PNGs
 - this README
 
